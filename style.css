@@ -115,7 +115,7 @@ body {
   gap: 50px;
   padding: 30px 20px 100px;
   width: 100%;
- max-width: 700px;
+ max-width: 600px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -291,3 +291,23 @@ body {
   display: none;
 }
 
+@media (max-width: 480px) {
+  .flashcard-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    padding: 10px 10px 100px;
+    gap: 16px;
+  }
+
+  .card-front, .card-back {
+    font-size: 16px;
+    padding: 6px;
+  }
+
+  .card-inner {
+    transition: transform 0.5s ease;
+  }
+
+  .tab-bar {
+    font-size: 20px;
+  }
+}
