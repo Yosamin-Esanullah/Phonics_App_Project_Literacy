@@ -111,7 +111,7 @@ body {
 /* Flashcard grid */
 .flashcard-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 50px;
   padding: 30px 20px 100px;
   width: 100%;
