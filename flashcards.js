@@ -37,7 +37,7 @@ flashcards.forEach(({ word, phonics }) => {
   const back = document.createElement('div');
   back.className = 'card-back';
   const video = document.createElement('video');
-  video.src = `videos/${word}.mp4`;
+  video.src = `${word}.mp4`;
   video.controls = true;
   back.appendChild(video);
 
@@ -55,7 +55,7 @@ card.addEventListener('click', () => {
     video.load();
   } else {
     // Flipping to back: set src, reset time, and play
-    video.src = `videos/${word}.mp4`;
+    video.src = `${word}.mp4`;
     video.load();
     video.play().catch(err => console.warn(`Playback error for "${word}":`, err));
   }

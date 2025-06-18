@@ -27,7 +27,7 @@ letters.forEach((letter, index) => {
   tile.addEventListener('click', () => {
     // Set letter and video
     floatingTile.textContent = letter;
-    letterVideo.src = `videos/${letter.toLowerCase()}.mp4`;
+    letterVideo.src = `${letter.toLowerCase()}.mp4`;
 
     // Get original position of clicked tile
     const rect = tile.getBoundingClientRect();
