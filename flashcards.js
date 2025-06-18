@@ -49,12 +49,20 @@ card.addEventListener('click', () => {
   const isFlipped = card.classList.contains('flipped');
 
   if (isFlipped) {
-    // Flipping back to front: fully stop video by removing and resetting the source
+    // Flipping back to front: fully stop video
     video.pause();
-    video.removeAttribute('src'); 
+    video.removeAttribute('src');
     video.load();
   } else {
-    // Flipping to back: set src, reset time, and play
+    // Pause all other videos before playing this one
+    document.querySelectorAll('video').forEach(v => {
+      if (v !== video) {
+        v.pause();
+        v.currentTime = 0;
+      }
+    });
+
+    // Set and play this video
     video.src = `${word}.mp4`;
     video.load();
     video.play().catch(err => console.warn(`Playback error for "${word}":`, err));
@@ -62,5 +70,6 @@ card.addEventListener('click', () => {
 
   card.classList.toggle('flipped');
 });
+
   container.appendChild(card);
 });
