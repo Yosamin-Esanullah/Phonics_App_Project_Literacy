@@ -1,5 +1,17 @@
 
+/* Universal reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Prevent horizontal scroll on mobile */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+ 
 body {
   font-family: sans-serif;
   display: flex;
