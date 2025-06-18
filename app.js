@@ -30,7 +30,7 @@ letters.forEach((letter, index) => {
  //   letterVideo.src = 'a.mp4';
   //  letterVideo.play().catch(e => console.error(e));
 
-   letterVideo.src = `${letter}.mp4`;
+   letterVideo.src = `${letter.toLowerCase()}.mp4`;
 
     // Get original position of clicked tile
     const rect = tile.getBoundingClientRect();
