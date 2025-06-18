@@ -112,11 +112,12 @@ body {
 .flashcard-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 30px;
+  gap: 50px;
   padding: 30px 20px 100px;
   width: 100%;
-  max-width: 700px;
+ max-width: 700px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 
