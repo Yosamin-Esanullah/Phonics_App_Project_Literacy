@@ -30,7 +30,8 @@ letters.forEach((letter, index) => {
  //   letterVideo.src = 'a.mp4';
   //  letterVideo.play().catch(e => console.error(e));
 
-   letterVideo.src = `${letter.toLowerCase()}.mp4`;
+    letterVideo.src = `/Phonics_App_Project_Literacy/${letter.toLowerCase()}.mp4`;
+
 
     // Get original position of clicked tile
     const rect = tile.getBoundingClientRect();
